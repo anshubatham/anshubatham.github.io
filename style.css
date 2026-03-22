@@ -380,3 +380,53 @@ body.light footer { background: #eef0f8; }
 /* ===== Count-up suffix ===== */
 .count-up::after { content: '+'; }
 .count-up[data-target="1"]::after { content: ''; }
+
+/* ===== Font Awesome icon sizing ===== */
+.proj-icon { font-size: 1.8rem; margin-bottom: 0.7rem; color: var(--primary-light); }
+.proj-icon i { font-size: 1.8rem; }
+.obj-icon { font-size: 2.2rem; color: var(--primary-light); margin-bottom: 1rem; display: block; }
+.hi-icon { font-size: 1.3rem; color: var(--primary-light); flex-shrink: 0; width: 20px; text-align: center; }
+.cc-icon { font-size: 1.6rem; color: var(--primary-light); flex-shrink: 0; width: 28px; text-align: center; }
+.tl-place i, .tl-date-range i { margin-right: 0.3rem; font-size: 0.8rem; color: var(--muted); }
+.tl-badge i { font-size: 0.5rem; vertical-align: middle; }
+.group-title i { margin-right: 0.4rem; }
+.skill-group h3 i { margin-right: 0.5rem; color: var(--primary-light); }
+.hero-tag i { margin-right: 0.3rem; }
+.btn-primary i, .btn-outline i, .btn-download i { margin-right: 0.4rem; }
+.photo-badge i { margin-right: 0.3rem; font-size: 0.75rem; }
+.edu-status i { margin-right: 0.3rem; font-size: 0.65rem; }
+.footer-copy i { margin-right: 0.2rem; }
+
+/* ===== Light mode — logo, hamburger, nav text fixes ===== */
+body.light .nav-logo { color: #1e1e2e; }
+body.light .nav-logo span { color: var(--primary); }
+body.light .hamburger span { background: #1e1e2e; }
+body.light .nav-links a { color: #444; }
+body.light .nav-links a:hover { color: var(--primary); }
+body.light .desktop-cta { background: var(--primary); color: #fff; }
+body.light .section-label { color: var(--primary); }
+body.light .hero-tag { color: var(--primary); background: rgba(109,40,217,0.08); border-color: rgba(109,40,217,0.2); }
+body.light .hero-name { color: #1e1e2e; }
+body.light .typewriter { color: var(--primary); }
+body.light .tw-cursor { color: var(--primary); }
+body.light .stat-box strong { color: var(--primary); }
+body.light .photo-badge { background: #fff; color: #1e1e2e; border-color: rgba(0,0,0,0.1); }
+body.light .proj-icon, body.light .hi-icon, body.light .cc-icon,
+body.light .obj-icon, body.light .skill-group h3 i { color: var(--primary); }
+body.light .proj-tags span { background: rgba(109,40,217,0.08); color: var(--primary); border-color: rgba(109,40,217,0.15); }
+body.light .obj-tags span { background: rgba(109,40,217,0.08); color: var(--primary); border-color: rgba(109,40,217,0.15); }
+body.light .tl-badge { color: #059669; background: rgba(16,185,129,0.08); }
+body.light .tl-place { color: #0284c7; }
+body.light .group-title { color: var(--primary); border-bottom-color: rgba(0,0,0,0.08); }
+body.light .nav-links a.active { color: var(--primary); }
+body.light .nav-links a.active::after { background: var(--primary); }
+body.light .scroll-progress { background: linear-gradient(90deg, var(--primary), var(--accent)); }
+body.light .back-to-top { background: var(--primary); }
+body.light .theme-toggle { background: #fff; border-color: rgba(0,0,0,0.1); color: #1e1e2e; }
+body.light footer { background: #eef0f8; border-top-color: rgba(0,0,0,0.08); }
+body.light .footer-logo { color: #1e1e2e; }
+body.light .cert-logo { background: linear-gradient(135deg, var(--accent), #0284c7); }
+body.light h2 { color: #1e1e2e; }
+body.light .edu-status.first { color: #059669; }
+body.light .edu-status.second { color: #d97706; }
+body.light .edu-status.pursuing { color: #0284c7; }
