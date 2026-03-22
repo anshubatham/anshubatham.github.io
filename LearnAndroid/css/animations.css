@@ -1,0 +1,156 @@
+/* ===== KEYFRAMES ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes blobFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+@keyframes phoneFloat {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-16px) rotate(2deg); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes particleFade {
+  0% { opacity: 0; transform: translateY(0); }
+  50% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-60px); }
+}
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+@keyframes slideInCard {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(108,99,255,0.4); }
+  50% { box-shadow: 0 0 0 12px rgba(108,99,255,0); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes bounceIn {
+  0% { transform: scale(0.3); opacity: 0; }
+  50% { transform: scale(1.05); }
+  70% { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* ===== SCROLL REVEAL ===== */
+.reveal {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+
+/* ===== PARTICLE ===== */
+.particle {
+  position: absolute; width: 4px; height: 4px;
+  border-radius: 50%; background: var(--primary);
+  animation: particleFade 3s ease-in-out infinite;
+  opacity: 0;
+}
+
+/* ===== GLOW ===== */
+.glow { animation: pulse 2s ease-in-out infinite; }
+
+/* ===== GRADIENT SHIMMER ===== */
+.shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(108,99,255,0.3) 50%, transparent 100%);
+  background-size: 200% auto;
+  animation: shimmer 2s linear infinite;
+}
+
+/* ===== CARD STAGGER ===== */
+.example-card:nth-child(1) { animation-delay: 0.05s; }
+.example-card:nth-child(2) { animation-delay: 0.1s; }
+.example-card:nth-child(3) { animation-delay: 0.15s; }
+.example-card:nth-child(4) { animation-delay: 0.2s; }
+.example-card:nth-child(5) { animation-delay: 0.25s; }
+.example-card:nth-child(6) { animation-delay: 0.3s; }
+
+/* ===== LOGO SPIN ON HOVER ===== */
+.logo-icon { transition: transform 0.4s ease; }
+.logo-icon:hover { transform: rotate(360deg); }
+
+/* ===== ACTIVE NAV INDICATOR ===== */
+.nav-link.active::after {
+  content: none;
+}
+
+/* ===== TOOLTIP ===== */
+[data-tooltip] { position: relative; }
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute; bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%);
+  background: var(--card2); color: var(--text); font-size: 0.75rem; padding: 6px 10px;
+  border-radius: 6px; white-space: nowrap; pointer-events: none;
+  opacity: 0; transition: opacity 0.2s; border: 1px solid var(--border);
+}
+[data-tooltip]:hover::after { opacity: 1; }
+
+/* ===== QUIZ OPTION ANIMATIONS ===== */
+@keyframes correctPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+@keyframes wrongShake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+.quiz-option.correct { animation: correctPop 0.3s ease; }
+.quiz-option.wrong   { animation: wrongShake 0.3s ease; }
+
+/* ===== PROGRESS BANNER SLIDE IN ===== */
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+.progress-banner { animation: slideDown 0.4s 0.5s ease both; }
+
+/* ===== ROADMAP DOT PULSE ===== */
+.roadmap-dot { animation: pulse 2.5s ease-in-out infinite; }
+
+/* ===== SEARCH BAR FOCUS GLOW ===== */
+@keyframes searchGlow {
+  0%, 100% { box-shadow: 0 0 0 3px rgba(108,99,255,0.1); }
+  50%       { box-shadow: 0 0 0 5px rgba(108,99,255,0.2); }
+}
+.search-bar:focus-within { animation: searchGlow 2s ease-in-out infinite; }
+
+/* ===== CHEATSHEET BODY SLIDE ===== */
+.cheatsheet-body { animation: fadeIn 0.25s ease; }
+
+/* ===== THEME TRANSITION ===== */
+body, .navbar, .card, .modal, .example-card, .resource-card, .quiz-option, .cheatsheet-card {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AndroidKotlin Academy</title>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Reading Progress Bar -->
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-icon"><i class="fab fa-android"></i></div>
+        <span>AndroidKotlin<span class="accent">Academy</span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home"      class="nav-link active">Home</a></li>
+        <li><a href="#roadmap"   class="nav-link">Roadmap</a></li>
+        <li><a href="#kotlin"    class="nav-link">Kotlin</a></li>
+        <li><a href="#examples"  class="nav-link">Examples</a></li>
+        <li><a href="#quiz"      class="nav-link">Quiz</a></li>
+        <li><a href="#cheatsheet"class="nav-link">Cheat Sheet</a></li>
+        <li><a href="#resources" class="nav-link">Resources</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" data-tooltip="Toggle theme">
+          <i class="fas fa-moon" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="blob blob1"></div>
+      <div class="blob blob2"></div>
+      <div class="blob blob3"></div>
+      <div class="particles" id="particles"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge"><i class="fab fa-android"></i> Learn Android Development</div>
+      <h1 class="hero-title">Master <span class="gradient-text">Android</span> with <span class="gradient-text">Kotlin</span></h1>
+      <p class="hero-subtitle">From zero to pro — modern tutorials, 36 real-world examples, quizzes, cheat sheets, and a complete Kotlin guide.</p>
+      <div class="hero-actions">
+        <a href="#roadmap" class="btn btn-primary"><i class="fas fa-rocket"></i> Start Learning</a>
+        <a href="#examples" class="btn btn-outline"><i class="fas fa-code"></i> View Examples</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" id="statExamples">36</span><span class="stat-label">Examples</span></div>
+        <div class="stat"><span class="stat-num" id="statProgress">0%</span><span class="stat-label">Progress</span></div>
+        <div class="stat"><span class="stat-num">Free</span><span class="stat-label">Forever</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-profile">
+        <div class="hero-profile-glow"></div>
+        <div class="hero-profile-ring"></div>
+        <img src="mypic.jpeg" alt="Developer" class="hero-profile-img" />
+        <div class="hero-profile-badge"><i class="fab fa-android"></i> Android Dev</div>
+        <div class="hero-profile-tag tag-kotlin"><i class="fas fa-code"></i> Kotlin</div>
+        <div class="hero-profile-tag tag-jetpack"><i class="fas fa-layer-group"></i> Jetpack</div>
+        <div class="hero-profile-tag tag-compose"><i class="fas fa-paint-brush"></i> Compose</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Progress Tracker Banner -->
+  <div class="progress-banner" id="progressBanner">
+    <div class="container">
+      <div class="progress-banner-inner">
+        <div class="progress-info">
+          <i class="fas fa-trophy"></i>
+          <span>Your Progress: <strong id="progressText">0 / 36 examples completed</strong></span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+        <button class="btn-sm" id="btnBookmarks"><i class="fas fa-bookmark"></i> Bookmarks (<span id="bookmarkCount">0</span>)</button>
+        <button class="btn-sm btn-sm-danger" id="btnResetProgress"><i class="fas fa-redo"></i> Reset</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Roadmap Section -->
+  <section class="section" id="roadmap">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge"><i class="fas fa-map"></i> Learning Path</div>
+        <h2 class="section-title">Android Dev <span class="gradient-text">Roadmap</span></h2>
+        <p class="section-sub">Follow this path from complete beginner to professional Android developer</p>
+      </div>
+      <div class="roadmap" id="roadmapContainer"></div>
+    </div>
+  </section>
+
+  <!-- Kotlin Tutorial Section -->
+  <section class="section section-dark" id="kotlin">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge"><i class="fas fa-book"></i> Complete Guide</div>
+        <h2 class="section-title">Kotlin <span class="gradient-text">Tutorial</span></h2>
+        <p class="section-sub">Everything you need to know about Kotlin for Android development</p>
+      </div>
+      <div class="kotlin-tabs">
+        <div class="tab-buttons" id="kotlinTabs"></div>
+        <div class="tab-content" id="kotlinContent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Examples Section -->
+  <section class="section" id="examples">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge"><i class="fas fa-mobile-alt"></i> Hands-On</div>
+        <h2 class="section-title">Android <span class="gradient-text">Examples</span></h2>
+        <p class="section-sub">36 real-world Android projects with step-by-step Kotlin solutions</p>
+      </div>
+      <div class="search-bar-wrap">
+        <div class="search-bar">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" id="searchInput" placeholder="Search examples, topics, tags..." autocomplete="off"/>
+          <button class="search-clear" id="searchClear"><i class="fas fa-times"></i></button>
+        </div>
+      </div>
+      <div class="filter-bar" id="filterBar"></div>
+      <div class="examples-grid" id="examplesGrid"></div>
+      <div class="no-results" id="noResults" style="display:none">
+        <i class="fas fa-search" style="font-size:2rem;color:var(--text-dim)"></i>
+        <p>No examples found. Try a different search.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="modal">
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <div class="modal-content" id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Quiz Section -->
+  <section class="section section-dark" id="quiz">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge"><i class="fas fa-brain"></i> Test Yourself</div>
+        <h2 class="section-title">Kotlin <span class="gradient-text">Quiz</span></h2>
+        <p class="section-sub">Test your knowledge with topic-wise MCQ quizzes</p>
+      </div>
+      <div class="quiz-topics" id="quizTopics"></div>
+      <div class="quiz-arena" id="quizArena" style="display:none"></div>
+    </div>
+  </section>
+
+  <!-- Cheat Sheet Section -->
+  <section class="section" id="cheatsheet">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge"><i class="fas fa-file-code"></i> Quick Reference</div>
+        <h2 class="section-title">Kotlin <span class="gradient-text">Cheat Sheet</span></h2>
+        <p class="section-sub">The most important patterns and snippets at a glance</p>
+      </div>
+      <div class="cheatsheet-grid" id="cheatsheetGrid"></div>
+    </div>
+  </section>
+
+  <!-- Resources -->
+  <section class="section section-dark" id="resources">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-badge"><i class="fas fa-star"></i> Extras</div>
+        <h2 class="section-title">Dev <span class="gradient-text">Resources</span></h2>
+        <p class="section-sub">Curated tools and links to level up your Android journey</p>
+      </div>
+      <div class="resources-grid" id="resourcesGrid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <div class="logo-icon"><i class="fab fa-android"></i></div>
+          <span>AndroidKotlin<span class="accent">Academy</span></span>
+        </div>
+        <p class="footer-text">Built with <i class="fas fa-heart" style="color:#f43f5e"></i> for Android developers everywhere.</p>
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#roadmap">Roadmap</a>
+          <a href="#kotlin">Kotlin</a>
+          <a href="#examples">Examples</a>
+          <a href="#quiz">Quiz</a>
+          <a href="#cheatsheet">Cheat Sheet</a>
+          <a href="#resources">Resources</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="scroll-top" id="scrollTop"><i class="fas fa-arrow-up"></i></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/beginner.js"></script>
+  <script src="js/extras.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/cheatsheet.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
