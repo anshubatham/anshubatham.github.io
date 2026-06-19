@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Math Hopper – the fun, fast-paced Android math game. Compete globally, earn achievements, and master mental math. Download free on Google Play." />
+  <meta name="keywords" content="Math Hopper, math game, educational game, Android, Google Play, mental math, leaderboard" />
+  <meta name="author" content="Anshu Batham" />
+  <meta name="robots" content="index, follow" />
+  <title>Math Hopper – Learn Math Through Play</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Math Hopper – Learn Math Through Play" />
+  <meta property="og:description" content="Fun, fast-paced Android math game with global leaderboards and achievements." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://anshubatham.github.io/math-hopper" />
+  <meta property="og:image" content="assets/og-image.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Math Hopper – Learn Math Through Play" />
+  <meta name="twitter:description" content="Fun, fast-paced Android math game with global leaderboards and achievements." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://anshubatham.github.io/math-hopper" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Math Hopper",
+    "operatingSystem": "Android",
+    "applicationCategory": "EducationalApplication",
+    "description": "Math Hopper makes learning mathematics fun through engaging gameplay, challenges, achievements, and global competition.",
+    "author": { "@type": "Person", "name": "Anshu Batham" },
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka+One&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+<!-- ===== NAVBAR ===== -->
+<header class="navbar" role="banner">
+  <nav class="nav-container" aria-label="Main navigation">
+    <a href="#home" class="nav-logo" aria-label="Math Hopper Home">
+      <span class="logo-icon">🐸</span>
+      <span class="logo-text">Math<strong>Hopper</strong></span>
+    </a>
+    <ul class="nav-links" role="list">
+      <li><a href="#features">Features</a></li>
+      <li><a href="#gameplay">Gameplay</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode" title="Toggle theme">
+        <span class="theme-icon">☀️</span>
+      </button>
+      <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" class="btn btn-primary nav-cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 20.5v-17c0-.83 1.01-1.3 1.66-.77l14 8.5a1 1 0 010 1.54l-14 8.5C4.01 21.8 3 21.33 3 20.5z"/></svg>
+        Download Free
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <ul role="list">
+      <li><a href="#features" class="mobile-link">Features</a></li>
+      <li><a href="#gameplay" class="mobile-link">Gameplay</a></li>
+      <li><a href="#why" class="mobile-link">Why Us</a></li>
+      <li><a href="#about" class="mobile-link">About</a></li>
+      <li><a href="#faq" class="mobile-link">FAQ</a></li>
+      <li><a href="#contact" class="mobile-link">Contact</a></li>
+      <li><a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" class="btn btn-primary mobile-cta">Download Free</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<main>
+<section id="home" class="hero" aria-label="Hero section">
+  <!-- Animated background canvas -->
+  <canvas id="heroCanvas" aria-hidden="true"></canvas>
+
+  <!-- Floating math symbols -->
+  <div class="math-symbols" aria-hidden="true">
+    <span class="symbol">+</span><span class="symbol">×</span>
+    <span class="symbol">÷</span><span class="symbol">−</span>
+    <span class="symbol">∑</span><span class="symbol">π</span>
+    <span class="symbol">√</span><span class="symbol">∞</span>
+  </div>
+
+  <div class="hero-container">
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        Free on Google Play
+      </div>
+      <h1 class="hero-title">
+        <span class="word-math">MATH</span>
+        <span class="word-hopper">HOPPER</span>
+      </h1>
+      <p class="hero-subtitle">
+        The Ultimate Brain-Powered Adventure! Hop through challenges, climb global leaderboards, and master mental math — all while having a blast.
+      </p>
+      <div class="hero-ctas">
+        <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer"
+           class="btn btn-primary btn-large" aria-label="Download Math Hopper on Google Play">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3 20.5v-17c0-.83 1.01-1.3 1.66-.77l14 8.5a1 1 0 010 1.54l-14 8.5C4.01 21.8 3 21.33 3 20.5z"/>
+          </svg>
+          Get it on Google Play
+        </a>
+        <a href="#features" class="btn btn-ghost btn-large">
+          Explore Features
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path d="M7 17L17 7M17 7H7M17 7v10"/>
+          </svg>
+        </a>
+      </div>
+      <div class="hero-stats" aria-label="App statistics">
+        <div class="stat">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">Free</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-value">Global</span>
+          <span class="stat-label">Leaderboards</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat-value">All Ages</span>
+          <span class="stat-label">Friendly</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <div class="phone-mockup">
+        <div class="phone-frame">
+          <div class="phone-screen">
+            <div class="app-ui">
+              <div class="app-header">
+                <span class="app-logo-sm">🐸</span>
+                <span class="app-name-sm">Math Hopper</span>
+                <span class="score-badge">⭐ 2,480</span>
+              </div>
+              <div class="math-problem">
+                <p class="problem-label">Quick!</p>
+                <p class="problem-equation">47 × 8 = ?</p>
+                <div class="answer-grid">
+                  <button class="answer-btn wrong">364</button>
+                  <button class="answer-btn correct pulse-btn">376</button>
+                  <button class="answer-btn">382</button>
+                  <button class="answer-btn">388</button>
+                </div>
+              </div>
+              <!-- Frog on lily pad like the app -->
+              <div class="phone-frog">
+                <span class="frog-emoji">🐸</span>
+                <div class="lily-pad"></div>
+              </div>
+              <div class="app-progress">
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width:68%"></div>
+                </div>
+                <span class="progress-text">Level 12 · 68%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="phone-glow"></div>
+        <div class="floating-badge badge-1">🏆 #3 Global</div>
+        <div class="floating-badge badge-2">🔥 12 Streak</div>
+        <div class="floating-badge badge-3">⚡ Fast!</div>
+      </div>
+    </div>
+  </div>
+  <a href="#features" class="scroll-indicator" aria-label="Scroll to features">
+    <span class="scroll-dot"></span>
+  </a>
+</section>
+
+<!-- ===== FEATURES ===== -->
+<section id="features" class="features section" aria-labelledby="features-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Features</span>
+      <h2 id="features-heading" class="section-title">Everything You Need to<br/><span class="gradient-text">Love Learning</span></h2>
+      <p class="section-subtitle">Six powerful features designed to make math genuinely fun and deeply educational.</p>
+    </div>
+    <div class="features-grid">
+
+      <article class="feature-card card-accent-1" tabindex="0">
+        <div class="feature-icon" aria-hidden="true">🏆</div>
+        <h3>Global Leaderboards</h3>
+        <p>Compete with players from around the world in real time. Rise through the ranks and see your name at the top.</p>
+        <div class="feature-tag">Real-time Firebase</div>
+      </article>
+
+      <article class="feature-card card-accent-2" tabindex="0">
+        <div class="feature-icon" aria-hidden="true">🎖️</div>
+        <h3>Achievement System</h3>
+        <p>Unlock badges and trophies as you hit milestones. Every win — big or small — is celebrated.</p>
+        <div class="feature-tag">30+ Achievements</div>
+      </article>
+
+      <article class="feature-card card-accent-3" tabindex="0">
+        <div class="feature-icon" aria-hidden="true">⚡</div>
+        <h3>Multiple Difficulty Levels</h3>
+        <p>From beginner to expert — the game scales with you. Never too easy, never too hard, always engaging.</p>
+        <div class="feature-tag">Adaptive Challenge</div>
+      </article>
+
+      <article class="feature-card card-accent-4" tabindex="0">
+        <div class="feature-icon" aria-hidden="true">📊</div>
+        <h3>Progress Tracking</h3>
+        <p>Track your math journey with detailed stats. Watch your accuracy and speed improve over time.</p>
+        <div class="feature-tag">Visual Analytics</div>
+      </article>
+
+      <article class="feature-card card-accent-5" tabindex="0">
+        <div class="feature-icon" aria-hidden="true">🧠</div>
+        <h3>Mental Math Training</h3>
+        <p>Speed-based challenges train your brain to solve equations instantly — a skill that lasts a lifetime.</p>
+        <div class="feature-tag">Cognitive Boost</div>
+      </article>
+
+      <article class="feature-card card-accent-6" tabindex="0">
+        <div class="feature-icon" aria-hidden="true">🌍</div>
+        <h3>Competitive Challenges</h3>
+        <p>Daily and weekly challenges keep things fresh. Beat your personal best or dethrone the global champion.</p>
+        <div class="feature-tag">Daily Quests</div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== GAMEPLAY SHOWCASE ===== -->
+<section id="gameplay" class="gameplay section" aria-labelledby="gameplay-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Gameplay</span>
+      <h2 id="gameplay-heading" class="section-title">See It in <span class="gradient-text">Action</span></h2>
+      <p class="section-subtitle">Fast, fun, and beautifully designed — here's what awaits you inside the game.</p>
+    </div>
+    <div class="gameplay-showcase">
+      <!-- Simulated screenshots via styled cards -->
+      <div class="screenshot-grid">
+        <div class="screenshot-card sc-main" tabindex="0" aria-label="Gameplay screen: solve math problems against the clock">
+          <div class="sc-content sc-game">
+            <div class="sc-header-bar"><span>🐸 Math Hopper</span><span class="sc-timer">0:42</span></div>
+            <div class="sc-problem">
+              <span class="sc-label">Quick!</span>
+              <span class="sc-eq">125 ÷ 5 = ?</span>
+              <div class="sc-choices">
+                <span class="sc-choice">20</span>
+                <span class="sc-choice sc-right">25</span>
+                <span class="sc-choice">30</span>
+                <span class="sc-choice">22</span>
+              </div>
+            </div>
+          </div>
+          <p class="sc-caption">⚡ Fast-Paced Gameplay</p>
+        </div>
+
+        <div class="screenshot-card sc-small" tabindex="0" aria-label="Leaderboard screen showing global rankings">
+          <div class="sc-content sc-leaders">
+            <div class="sc-header-bar"><span>🏆 Leaderboard</span></div>
+            <ul class="sc-leaderlist">
+              <li><span class="rank gold">🥇</span><span class="pname">Riya S.</span><span class="pts">9,820</span></li>
+              <li><span class="rank silver">🥈</span><span class="pname">Arjun K.</span><span class="pts">9,450</span></li>
+              <li><span class="rank bronze">🥉</span><span class="pname">Emma W.</span><span class="pts">9,210</span></li>
+              <li><span class="rank">4</span><span class="pname">You</span><span class="pts current-player">8,980</span></li>
+            </ul>
+          </div>
+          <p class="sc-caption">🌍 Global Rankings</p>
+        </div>
+
+        <div class="screenshot-card sc-small" tabindex="0" aria-label="Achievements screen showing unlocked badges">
+          <div class="sc-content sc-achiev">
+            <div class="sc-header-bar"><span>🎖️ Achievements</span></div>
+            <div class="sc-badges">
+              <span class="sc-badge unlocked" title="Speed Demon">⚡</span>
+              <span class="sc-badge unlocked" title="Streak Master">🔥</span>
+              <span class="sc-badge unlocked" title="Brain Boost">🧠</span>
+              <span class="sc-badge locked" title="Champion">👑</span>
+              <span class="sc-badge locked" title="Legend">🌟</span>
+              <span class="sc-badge locked" title="Infinity">♾️</span>
+            </div>
+            <p class="sc-progress-text">3 of 30 Unlocked</p>
+          </div>
+          <p class="sc-caption">🎖️ Achievements</p>
+        </div>
+
+        <div class="screenshot-card sc-wide" tabindex="0" aria-label="Player profile screen">
+          <div class="sc-content sc-profile">
+            <div class="sc-header-bar"><span>👤 Profile</span></div>
+            <div class="sc-profile-body">
+              <div class="sc-avatar">🐸</div>
+              <div class="sc-profile-info">
+                <p class="sc-pname-big">Anshu B.</p>
+                <p class="sc-country">🇮🇳 India</p>
+                <div class="sc-stat-row">
+                  <span>Best Score<strong>9,820</strong></span>
+                  <span>Level<strong>42</strong></span>
+                  <span>Rank<strong>#3</strong></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <p class="sc-caption">👤 Player Profiles</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY MATH HOPPER ===== -->
+<section id="why" class="why section" aria-labelledby="why-heading">
+  <div class="container">
+    <div class="why-layout">
+      <div class="why-content">
+        <span class="section-tag">Why Math Hopper</span>
+        <h2 id="why-heading" class="section-title">Built for Real <span class="gradient-text">Learning</span></h2>
+        <p class="section-subtitle">We didn't just build a game — we built a system designed around how the brain actually learns mathematics.</p>
+        <div class="why-points">
+          <div class="why-point">
+            <div class="why-icon" aria-hidden="true">🧠</div>
+            <div>
+              <h3>Improves Mental Math</h3>
+              <p>Speed-based challenges force your brain to compute quickly, building lasting number intuition.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-icon" aria-hidden="true">😊</div>
+            <div>
+              <h3>Makes Learning Enjoyable</h3>
+              <p>Points, streaks, and celebrations turn practice sessions into moments kids look forward to.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-icon" aria-hidden="true">💪</div>
+            <div>
+              <h3>Builds Confidence</h3>
+              <p>Progressive difficulty means you always succeed at the right level — building real mathematical confidence.</p>
+            </div>
+          </div>
+          <div class="why-point">
+            <div class="why-icon" aria-hidden="true">🏅</div>
+            <div>
+              <h3>Healthy Competition</h3>
+              <p>Global leaderboards motivate without pressure — compete to improve yourself, not just to win.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="why-visual" aria-hidden="true">
+        <div class="why-card-stack">
+          <div class="why-stat-card wsc-1">
+            <span class="wsc-number">4.8★</span>
+            <span class="wsc-label">Average Rating</span>
+          </div>
+          <div class="why-stat-card wsc-2">
+            <span class="wsc-number">🔥</span>
+            <span class="wsc-label">Daily Challenges</span>
+          </div>
+          <div class="why-stat-card wsc-3">
+            <span class="wsc-number">30+</span>
+            <span class="wsc-label">Achievements</span>
+          </div>
+          <div class="why-stat-card wsc-4">
+            <span class="wsc-number">∞</span>
+            <span class="wsc-label">Replay Value</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT THE DEVELOPER ===== -->
+<section id="about" class="about section" aria-labelledby="about-heading">
+  <div class="container">
+    <div class="about-card glass-card">
+      <div class="about-avatar-wrap">
+        <div class="about-avatar" aria-label="Developer photo placeholder">
+          <span class="avatar-initials">AB</span>
+          <div class="avatar-ring"></div>
+        </div>
+        <div class="about-social">
+          <a href="mailto:batham925@gmail.com" aria-label="Email Anshu Batham" class="social-btn" title="Email">✉️</a>
+          <a href="https://play.google.com/store/apps/developer?id=Anshu+Batham" target="_blank" rel="noopener noreferrer" aria-label="Google Play Developer Profile" class="social-btn" title="Google Play">▶️</a>
+        </div>
+      </div>
+      <div class="about-info">
+        <span class="section-tag">Meet the Developer</span>
+        <h2 id="about-heading">Anshu Batham</h2>
+        <p class="about-title">Android Developer &amp; Educational Game Designer</p>
+        <p class="about-bio">
+          Hi, I'm Anshu — a passionate Android developer with a love for making education engaging and accessible.
+          Math Hopper was born from a simple belief: that learning math should feel as fun and rewarding as playing
+          your favourite game. I've poured that vision into every feature, every animation, and every challenge inside the app.
+        </p>
+        <div class="about-tags">
+          <span class="tag">Android</span>
+          <span class="tag">Firebase</span>
+          <span class="tag">Educational Tech</span>
+          <span class="tag">Game Design</span>
+          <span class="tag">UI/UX</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="contact section" aria-labelledby="contact-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Get in Touch</span>
+      <h2 id="contact-heading" class="section-title">We'd Love to <span class="gradient-text">Hear From You</span></h2>
+      <p class="section-subtitle">Have feedback, a collaboration idea, or just want to say hi? Reach out any time.</p>
+    </div>
+    <div class="contact-layout">
+      <form class="contact-form glass-card" id="contactForm" novalidate aria-label="Contact form">
+        <div class="form-group">
+          <label for="contactName">Your Name <span aria-hidden="true">*</span></label>
+          <input type="text" id="contactName" name="name" required placeholder="Alex Smith" autocomplete="name" />
+          <span class="form-error" id="nameError" role="alert"></span>
+        </div>
+        <div class="form-group">
+          <label for="contactEmail">Email Address <span aria-hidden="true">*</span></label>
+          <input type="email" id="contactEmail" name="email" required placeholder="alex@example.com" autocomplete="email" />
+          <span class="form-error" id="emailError" role="alert"></span>
+        </div>
+        <div class="form-group">
+          <label for="contactSubject">Subject</label>
+          <select id="contactSubject" name="subject">
+            <option value="">Select a topic</option>
+            <option value="feedback">App Feedback</option>
+            <option value="bug">Bug Report</option>
+            <option value="partnership">Partnership</option>
+            <option value="privacy">Privacy / Data Request</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="contactMessage">Message <span aria-hidden="true">*</span></label>
+          <textarea id="contactMessage" name="message" required rows="5" placeholder="Tell us what's on your mind..."></textarea>
+          <span class="form-error" id="messageError" role="alert"></span>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full">Send Message →</button>
+        <div class="form-success" id="formSuccess" role="status" aria-live="polite" hidden>
+          ✅ Message sent! We'll get back to you within 48 hours.
+        </div>
+      </form>
+      <div class="contact-info">
+        <div class="contact-item glass-card">
+          <span class="contact-icon" aria-hidden="true">✉️</span>
+          <div>
+            <h3>Email</h3>
+            <a href="mailto:batham925@gmail.com">batham925@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item glass-card">
+          <span class="contact-icon" aria-hidden="true">🔒</span>
+          <div>
+            <h3>Privacy Requests</h3>
+            <a href="mailto:batham925@gmail.com">batham925@gmail.com</a>
+          </div>
+        </div>
+        <div class="contact-item glass-card">
+          <span class="contact-icon" aria-hidden="true">📱</span>
+          <div>
+            <h3>Download the App</h3>
+            <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">Google Play Store</a>
+          </div>
+        </div>
+        <div class="contact-item glass-card">
+          <span class="contact-icon" aria-hidden="true">📄</span>
+          <div>
+            <h3>Legal</h3>
+            <a href="privacy-policy.html">Privacy Policy</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section id="faq" class="faq section" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">FAQ</span>
+      <h2 id="faq-heading" class="section-title">Common <span class="gradient-text">Questions</span></h2>
+      <p class="section-subtitle">Everything you need to know before downloading.</p>
+    </div>
+    <div class="faq-list" role="list">
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq1">
+          Is Math Hopper free to download?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id="faq1" hidden>
+          <p>Yes — Math Hopper is completely free to download and play on Android. The app is supported by non-intrusive ads via Google AdMob. No purchases are required to access the core gameplay, leaderboards, or achievements.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq2">
+          How do the global leaderboards work?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id="faq2" hidden>
+          <p>Leaderboards are powered by Firebase Realtime Database. As you complete challenges and earn points, your score is updated in real time. Players from around the world are ranked by their cumulative scores, and you can filter by country or region.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq3">
+          Is an internet connection required to play?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id="faq3" hidden>
+          <p>Core gameplay works offline. However, an internet connection is required to sync your scores to the global leaderboard, access your profile from a new device, and receive achievement updates in real time.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq4">
+          How is my data stored and protected?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id="faq4" hidden>
+          <p>Your data is stored securely in Google Firebase with industry-standard encryption. We collect only what's necessary: your player name, country, scores, and achievements. We never sell your data to third parties. See our <a href="privacy-policy.html">Privacy Policy</a> for full details.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq5">
+          How can I delete my account and data?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id="faq5" hidden>
+          <p>You have the right to request complete deletion of your data at any time. Simply email us at <a href="mailto:batham925@gmail.com">batham925@gmail.com</a> with the subject "Data Deletion Request" and your registered player name. We will process your request within 30 days and confirm via email once your data has been permanently removed.</p>
+        </div>
+      </div>
+
+      <div class="faq-item" role="listitem">
+        <button class="faq-question" aria-expanded="false" aria-controls="faq6">
+          Is Math Hopper safe for children?
+          <span class="faq-icon" aria-hidden="true">+</span>
+        </button>
+        <div class="faq-answer" id="faq6" hidden>
+          <p>Absolutely. Math Hopper is designed for players of all ages, including children. We comply with Google Play's Families Policy and applicable children's privacy laws. Ads shown are family-safe. Parental consent for data collection from children under 13 is handled in accordance with COPPA guidelines. See our <a href="privacy-policy.html">Privacy Policy</a> for our Children's Privacy section.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="cta-banner section" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="cta-card glass-card">
+      <div class="cta-content">
+        <h2 id="cta-heading">Ready to Start <span class="gradient-text">Hopping</span>?</h2>
+        <p>Join thousands of players mastering math one hop at a time. Free forever.</p>
+      </div>
+      <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer"
+         class="btn btn-primary btn-large" aria-label="Download Math Hopper on Google Play">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M3 20.5v-17c0-.83 1.01-1.3 1.66-.77l14 8.5a1 1 0 010 1.54l-14 8.5C4.01 21.8 3 21.33 3 20.5z"/>
+        </svg>
+        Download Free on Google Play
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo" aria-label="Math Hopper">
+          <span class="logo-icon">🐸</span>
+          <span class="logo-text">Math<strong>Hopper</strong></span>
+        </a>
+        <p>Making mathematics fun, competitive, and accessible for everyone — one hop at a time.</p>
+        <a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer" class="gplay-badge" aria-label="Get it on Google Play">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M3 20.5v-17c0-.83 1.01-1.3 1.66-.77l14 8.5a1 1 0 010 1.54l-14 8.5C4.01 21.8 3 21.33 3 20.5z"/>
+          </svg>
+          Get it on Google Play
+        </a>
+      </div>
+      <div class="footer-col">
+        <h3>App</h3>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#gameplay">Gameplay</a></li>
+          <li><a href="#why">Why Math Hopper</a></li>
+          <li><a href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">Download</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#about">About Developer</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="mailto:batham925@gmail.com">Data Deletion Request</a></li>
+          <li><a href="mailto:batham925@gmail.com">Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Math Hopper · Developed by <strong>Anshu Batham</strong>. All rights reserved.</p>
+      <p class="footer-links">
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <span aria-hidden="true">·</span>
+        <a href="mailto:batham925@gmail.com">Contact</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
