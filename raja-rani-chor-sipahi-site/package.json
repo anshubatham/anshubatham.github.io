@@ -1,0 +1,12 @@
+{
+  "name": "raja-rani-chor-sipahi-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx serve public",
+    "check": "node scripts/check-links.mjs"
+  },
+  "devDependencies": {
+    "serve": "^14.2.4"
+  }
+}
